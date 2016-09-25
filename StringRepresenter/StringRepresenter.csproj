@@ -51,14 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientModule.cs" />
+    <Compile Include="Model\CommonStringObject.cs" />
+    <Compile Include="Model\ViewObject.cs" />
+    <Compile Include="MyListViewAdapter.cs" />
+    <Compile Include="Provider\ObjectProvider.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Repository\Generator\CommonStringGenerator.cs" />
+    <Compile Include="Repository\Generator\IObjectGenerator.cs" />
+    <Compile Include="Repository\Generator\IdCreator.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\Generator\StringCreator.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CommonStringsRepository.cs" />
+    <Compile Include="StringViewActivity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\ListView_Row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\StringView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
