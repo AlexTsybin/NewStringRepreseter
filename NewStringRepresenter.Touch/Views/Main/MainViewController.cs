@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using NewStringRepresenter.Touch.Views.Main.Cell;
-using StringRepresenter.Core.ViewModels;
 using StringRepresenter.Core.ViewModels.Main;
 using UIKit;
 

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using StringRepresenter.API;
 using StringRepresenter.API.Model.TicketForEvents.Types;
 
 namespace StringRepresenter.API.Model.TicketForEvents
@@ -35,8 +30,29 @@ namespace StringRepresenter.API.Model.TicketForEvents
             bool isPremiere = Convert.ToByte(xml.Element("is_premiere").Value) == 0 ? false : true;
             bool isKids = Convert.ToByte(xml.Element("is_kids").Value) == 0 ? false : true; 
             OfferType type = GetType(xml.Attribute("type").Value, xml);
-            return new TicketForEvents(id, type, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery,
-                description, localDeliveryCost, name, place, hall, hallPart, date, isPremiere, isKids);
+            return new TicketForEvents()
+				{
+				Id = id,
+				OfferType = type,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description = description,
+				Name = name,
+				LocalDeliveryCost = localDeliveryCost,
+				Place = place,
+				Hall = hall,
+				HallPart = hallPart,
+				Date = date,
+				IsPremiere = isPremiere,
+				IsKids = isKids
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)

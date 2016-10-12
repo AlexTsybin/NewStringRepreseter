@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using StringRepresenter.API;
-
-namespace StringRepresenter.API.Model
+﻿namespace StringRepresenter.API.Model
 {
     public abstract class Offer
     {
         public int Id { get; set; }
-        public OfferType Type { get; set; }
+        public OfferType OfferType { get; set; }
         public int BId { get; set; }
         public int? CBId { get; set; }
         public bool IsAvailable { get; set; }
@@ -23,22 +16,22 @@ namespace StringRepresenter.API.Model
         public bool? Delivery { get; set; }
         public string Description { get; set; }
 
-        public Offer(int id, OfferType type, int bid, int? cbid, bool isAvailable, string url, double price, string currencyId,
-		             CategoryId categoryId, string picture, bool? delivery, string description)
-        {
-            Id = id;
-            Type = type;
-            BId = bid;
-            CBId = cbid;
-            IsAvailable = isAvailable;
-            Url = url;
-            Price = price;
-            CurrencyId = currencyId;
-            CategoryId = categoryId;
-            Picture = picture;
-            Delivery = delivery;
-            Description = description;
-        }
+        //public Offer(int id, OfferType type, int bid, int? cbid, bool isAvailable, string url, double price, string currencyId,
+		      //       CategoryId categoryId, string picture, bool? delivery, string description)
+        //{
+        //    Id = id;
+        //    Type = type;
+        //    BId = bid;
+        //    CBId = cbid;
+        //    IsAvailable = isAvailable;
+        //    Url = url;
+        //    Price = price;
+        //    CurrencyId = currencyId;
+        //    CategoryId = categoryId;
+        //    Picture = picture;
+        //    Delivery = delivery;
+        //    Description = description;
+        //}
         
     }
 }

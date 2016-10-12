@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using StringRepresenter.API;
 using StringRepresenter.API.Model.Media.Kinds;
 using StringRepresenter.API.Model.Media.Types;
 
@@ -32,8 +27,25 @@ namespace StringRepresenter.API.Model.Media
             int year = Convert.ToInt32(xml.Element("year").Value);
 			OfferKind kindOfMedia = GetOfferKindById(Convert.ToInt32(categoryId.Text), xml);
             OfferType offerType = GetType(xml.Attribute("type").Value, xml);
-            return new Media(id, offerType, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery, description, title,
-                storage, year, kindOfMedia);
+            return new Media()
+				{
+				Id = id,
+				OfferType = offerType,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description = description,
+				Title = title,
+				Storage = storage,
+				Year = year,
+				KindOfMedia = kindOfMedia
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)

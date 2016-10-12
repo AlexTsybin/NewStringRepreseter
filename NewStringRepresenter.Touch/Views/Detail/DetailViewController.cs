@@ -1,9 +1,7 @@
-﻿using System;
-using MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using StringRepresenter.Core.ViewModels.Detail;
-using UIKit;
 
 namespace NewStringRepresenter.Touch.Views.Detail
 {

@@ -3,7 +3,6 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform;
-using NewStringRepresenter.Touch.Views;
 using UIKit;
 
 namespace NewStringRepresenter.Touch

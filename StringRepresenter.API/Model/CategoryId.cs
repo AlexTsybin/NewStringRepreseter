@@ -1,5 +1,4 @@
-﻿using System;
-namespace StringRepresenter.API
+﻿namespace StringRepresenter.API
 {
 	public class CategoryId
 	{

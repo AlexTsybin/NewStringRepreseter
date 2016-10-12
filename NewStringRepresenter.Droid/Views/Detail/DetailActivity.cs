@@ -1,11 +1,10 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using MvvmCross.Droid.Views;
 
 namespace NewStringRepresenter.Droid.Views.Detail
 {
-	[Activity(Label = "StringView")]
+	[Activity(Label = "@string/selected_view")]
 	public class DetailActivity : MvxActivity
 	{
 		protected override void OnCreate(Bundle bundle)

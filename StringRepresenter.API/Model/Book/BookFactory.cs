@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using StringRepresenter.API;
 using StringRepresenter.API.Model.Book.Kinds;
 using StringRepresenter.API.Model.Book.Types;
 
@@ -42,11 +38,32 @@ namespace StringRepresenter.API.Model.Book
             {
                 series = null;
             }
-            
             bool downloadable = Convert.ToBoolean(xml.Element("downloadable").Value);
             OfferType newType = GetType(xml.Attribute("type").Value, xml);
-            return new Book(id, newType, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery, description, name, author,
-                year, publisher, isbn, language, series, downloadable, kindOfBook);
+			return new Book()
+			{
+				Id = id,
+				OfferType = newType,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description=description,
+				Name=name,
+				Author=author,
+				Year=year,
+				Publisher=publisher,
+				ISBN=isbn,
+				Language=language,
+				Series=series,
+				Downloadable=downloadable,
+				KindOfBook=kindOfBook
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)

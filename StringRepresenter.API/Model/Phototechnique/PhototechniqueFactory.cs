@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using StringRepresenter.API;
+﻿using System.Xml.Linq;
 using StringRepresenter.API.Model.Phototechnique.Kinds;
 
 namespace StringRepresenter.API.Model.Phototechnique
@@ -27,8 +21,21 @@ namespace StringRepresenter.API.Model.Phototechnique
             XmlParser.ParseOfferPart(xml, out id, out bid, out cbid, out isAvailable, out url, out price, out currencyId, out categoryId,
                 out picture, out delivery, out description);
             OfferType type = GetType(xml.Attribute("type").Value, xml);
-            return new Phototechnique(id, type, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery,
-                description);
+            return new Phototechnique()
+				{
+				Id = id,
+				OfferType = type,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description = description
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)

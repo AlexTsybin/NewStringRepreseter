@@ -6,7 +6,7 @@ using MvvmCross.Droid.Views;
 
 namespace NewStringRepresenter.Droid.Views.Main
 {
-	[Activity(Label = "Xml Viewer", MainLauncher = true)]
+	[Activity(Label = "@string/app_name", MainLauncher = true)]
 	public class MainActivity : MvxActivity
 	{
 		LinearLayoutManager mManager;
@@ -17,12 +17,12 @@ namespace NewStringRepresenter.Droid.Views.Main
 
 			SetContentView(Resource.Layout.Activity_Main);
 
-			var petList = FindViewById<MvxRecyclerView>(Resource.Id.recyclerView);
+			var offerList = FindViewById<MvxRecyclerView>(Resource.Id.recyclerView);
 
 			mManager = new LinearLayoutManager(this);
 
-			petList.SetLayoutManager(mManager);
-			petList.ItemTemplateSelector = new MainTemplateSelector();
+			offerList.SetLayoutManager(mManager);
+			offerList.ItemTemplateSelector = new MainTemplateSelector();
 		}
 	}
 }

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using StringRepresenter.API;
 using StringRepresenter.API.Model.Travel.Kinds;
 using StringRepresenter.API.Model.Travel.Types;
 
@@ -33,8 +29,26 @@ namespace StringRepresenter.API.Model.Travel
             string region = xml.Element("region").Value;
             OfferType type = GetType(xml.Attribute("type").Value, xml);
 			OfferKind kind = GetOfferKindById(Convert.ToInt32(categoryId.Text), xml);
-            return new Travel(id, type, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery, description, localDeliveryCost,
-                worldRegion, country, region, kind);
+            return new Travel()
+			{
+				Id = id,
+				OfferType = type,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description = description,
+				LocalDeliveryCost = localDeliveryCost,
+				WorldRegion = worldRegion,
+				Country = country,
+				Region = region,
+				KindOfTravel = kind
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)

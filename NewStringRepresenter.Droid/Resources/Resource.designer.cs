@@ -2107,6 +2107,9 @@ namespace NewStringRepresenter.Droid
 			// aapt resource value: 0x7f080014
 			public const int hello = 2131230740;
 			
+			// aapt resource value: 0x7f080016
+			public const int selected_view = 2131230742;
+			
 			// aapt resource value: 0x7f080013
 			public const int status_bar_notification_info_overflow = 2131230739;
 			

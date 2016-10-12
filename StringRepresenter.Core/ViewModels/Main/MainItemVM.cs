@@ -1,5 +1,4 @@
-﻿using System;
-namespace StringRepresenter.Core.ViewModels.Main
+﻿namespace StringRepresenter.Core.ViewModels.Main
 {
 	public class MainItemVM
 	{

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using StringRepresenter.API;
 using StringRepresenter.API.Model.OfficeEquipment.Kinds.Printer.Kinds;
 using StringRepresenter.API.Model.OfficeEquipment.Types;
 
@@ -36,8 +31,29 @@ namespace StringRepresenter.API.Model.OfficeEquipment
 			string model = xml.Element("model").Value;
             OfferType type = GetType(xml.Attribute("type").Value, xml);
 			OfferKind kind = GetOfferKindById(Convert.ToInt32(categoryId.Text), xml);
-            return new OfficeEquipment(id, type, bid, isAvailable, cbid, url, price, currencyId, categoryId, picture, delivery,
-			                           description, typePrefix, localDeliveryCost, countryOfOrigin, manufacturerWarranty,vendor,vendorCode,model, kind);
+            return new OfficeEquipment()
+				{
+				Id = id,
+				OfferType = type,
+				BId = bid,
+				IsAvailable = isAvailable,
+				CBId = cbid,
+				Url = url,
+				Price = price,
+				CurrencyId = currencyId,
+				CategoryId = categoryId,
+				Picture = picture,
+				Delivery = delivery,
+				Description = description,
+				TypePrefix = typePrefix,
+				LocalDeliveryCost = localDeliveryCost,
+				CountryOfOrigin = countryOfOrigin,
+				ManufacturerWarranty = manufacturerWarranty,
+				Vendor = vendor,
+				VendorCode = vendorCode,
+				Model = model,
+				KindOfOfficeEquipment = kind
+			};
         }
 
         public override OfferKind GetOfferKindById(int id, XElement xml)
