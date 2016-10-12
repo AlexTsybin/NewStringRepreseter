@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
+    <Mvx.MvxImageView
+        android:id="@+id/mvxImageView1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="5dp"
+		android:layout_centerVertical = "true"
+        android:layout_alignParentLeft="true"
+        local:MvxBind="ImageUrl ImageUrl" />
+    <TextView
+        android:id="@+id/txtLine"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/mvxImageView1"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+		android:layout_centerVertical ="true"
+        android:paddingLeft="10dp"
+        local:MvxBind="Text Title;Typeface StringToFont('Roboto-Bold')" />
+</RelativeLayout>

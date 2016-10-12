@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="ImageContainer" destination="pAF-Is-22h" id="fCR-Ut-xqj"/>
+                <outlet property="MyLabel" destination="4CU-pP-QeT" id="Ftt-O0-WtM"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pAF-Is-22h">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="pAF-Is-22h" secondAttribute="height" multiplier="1:1" id="Yh8-pT-txc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CU-pP-QeT">
+                    <frame key="frameInset" minX="10" minY="455" width="355" height="212"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4CU-pP-QeT" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="8Y8-MP-b99"/>
+                <constraint firstItem="pAF-Is-22h" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="GIa-d8-gFO"/>
+                <constraint firstItem="pAF-Is-22h" firstAttribute="top" secondItem="2" secondAttribute="top" constant="40" id="LUA-Sz-XGa"/>
+                <constraint firstAttribute="trailing" secondItem="4CU-pP-QeT" secondAttribute="trailing" constant="10" id="SnM-vG-971"/>
+                <constraint firstItem="4CU-pP-QeT" firstAttribute="top" secondItem="pAF-Is-22h" secondAttribute="bottom" constant="40" id="axB-f3-4vF"/>
+                <constraint firstAttribute="trailing" secondItem="pAF-Is-22h" secondAttribute="trailing" id="nJe-wE-jpg"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

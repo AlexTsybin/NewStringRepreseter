@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0A8AAEC-86D0-4DAD-8391-4E9704112426}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StringRepresenter.API</RootNamespace>
+    <AssemblyName>StringRepresenter.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Offer.cs" />
+    <Compile Include="Model\CategoryId.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\OfferFactory.cs" />
+    <Compile Include="Model\OfferKind.cs" />
+    <Compile Include="Model\OfferType.cs" />
+    <Compile Include="Model\Book\Book.cs" />
+    <Compile Include="Model\Book\BookFactory.cs" />
+    <Compile Include="Model\Book\Kinds\ChildrensLiterature.cs" />
+    <Compile Include="Model\Book\Kinds\Detective.cs" />
+    <Compile Include="Model\Book\Kinds\Fiction.cs" />
+    <Compile Include="Model\Book\Kinds\Guide.cs" />
+    <Compile Include="Model\Book\Kinds\KindOfBook.cs" />
+    <Compile Include="Model\Book\Types\AudioType.cs" />
+    <Compile Include="Model\Book\Types\BookType.cs" />
+    <Compile Include="Model\Book\Types\TextType.cs" />
+    <Compile Include="Model\Media\Media.cs" />
+    <Compile Include="Model\Media\MediaFactory.cs" />
+    <Compile Include="Model\Media\Kinds\KindOfMedia.cs" />
+    <Compile Include="Model\Media\Kinds\Music.cs" />
+    <Compile Include="Model\Media\Kinds\Video.cs" />
+    <Compile Include="Model\Media\Types\ArtistTitleType.cs" />
+    <Compile Include="Model\Media\Types\MediaType.cs" />
+    <Compile Include="Model\OfficeEquipment\OfficeEquipment.cs" />
+    <Compile Include="Model\OfficeEquipment\OfficeEquipmentFactory.cs" />
+    <Compile Include="Model\OfficeEquipment\Kinds\KindOfOfficeEquipment.cs" />
+    <Compile Include="Model\OfficeEquipment\Kinds\Printer\Printer.cs" />
+    <Compile Include="Model\OfficeEquipment\Kinds\Printer\Kinds\JetPrinter.cs" />
+    <Compile Include="Model\OfficeEquipment\Kinds\Printer\Kinds\KindOfPrinter.cs" />
+    <Compile Include="Model\OfficeEquipment\Kinds\Printer\Kinds\LaserPrinter.cs" />
+    <Compile Include="Model\OfficeEquipment\Types\OfficeEquipmentType.cs" />
+    <Compile Include="Model\OfficeEquipment\Types\VendorModelType.cs" />
+    <Compile Include="Model\Phototechnique\Phototechnique.cs" />
+    <Compile Include="Model\Phototechnique\PhototechniqueFactory.cs" />
+    <Compile Include="Model\Phototechnique\Kinds\Camera.cs" />
+    <Compile Include="Model\Phototechnique\Kinds\KindOfPhototechnique.cs" />
+    <Compile Include="Model\Phototechnique\Kinds\Lens.cs" />
+    <Compile Include="Model\Phototechnique\Types\PhototechniqueType.cs" />
+    <Compile Include="Model\TicketForEvents\Hall.cs" />
+    <Compile Include="Model\TicketForEvents\TicketForEvents.cs" />
+    <Compile Include="Model\TicketForEvents\TicketForEventsFactory.cs" />
+    <Compile Include="Model\TicketForEvents\Types\CommonTicketType.cs" />
+    <Compile Include="Model\TicketForEvents\Types\EventTicketType.cs" />
+    <Compile Include="Model\Travel\Travel.cs" />
+    <Compile Include="Model\Travel\TravelFactory.cs" />
+    <Compile Include="Model\Travel\Kinds\Flight.cs" />
+    <Compile Include="Model\Travel\Kinds\KindOfTravel.cs" />
+    <Compile Include="Model\Travel\Kinds\Tour.cs" />
+    <Compile Include="Model\Travel\Types\CommonTourType.cs" />
+    <Compile Include="Model\Travel\Types\TravelType.cs" />
+    <Compile Include="Model\Shop.cs" />
+    <Compile Include="XmlParser.cs" />
+    <Compile Include="Services\IConnectionService.cs" />
+    <Compile Include="Services\Implementations\ConnectionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Implementations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
